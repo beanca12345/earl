@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>BEA SHOP</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+  <div class="container">
+    <div class="navbar">
+      <div class="logo">
+        <img src="logo.png" width="200px">
+      </div>
+      <nav>
+        <ul id="MenuItems">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="acccount.html">Account</a></li>
+        </ul>
+      </nav>
+      <img src="menu.png" class="menu-icon" onclick="menutoggle()">
+    </div>
+  </div>
+
+    <div class="small-container">
+
+       <div class="row row-2">
+        <h2>All Products</h2>
+        <select> 
+          <option>Default Shorting</option>
+          <option>Short by Price</option>
+          <option>Short by Popularity</option>
+          <option>Short by Rating</option>
+          <option>Short by Sale</option>
+        </select>
+       </div>
+
+      <div class="row">
+        <div class="col-4">
+          <img src="product1.jpg">
+          
+          <h4>Slide White</h4>
+          <div class="rating">
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+          </div>
+          <p>₱300.00</p>
+          <button onclick="addToCart('Slide White', 300.00)">Add to Cart</button>
+        </div>
+        
+        <div class="col-4">
+          <img src="product2.jpg">
+          <h4>khaki hat</h4>
+          <div class="rating">
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star-half'></i>
+          </div>
+          <p>₱200.00</p>
+           <button onclick="addToCart('Khaki Hat', 200.00)">Add to Cart</button>
+        </div>
+        
+        <div class="col-4">
+          <img src="product 3.jpg">
+          <h4>Boots</h4>
+          <div class="rating">
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bx-star' ></i>
+          </div>
+          <p>₱200.00</p>
+              <button onclick="addToCart('Boots', 200.00)">Add to Cart</button>
+        </div>
+        
+        <div class="col-4">
+          <img src="product4.jpg">
+          <h4>Croptop</h4>
+          <div class="rating">
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+          </div>
+          <p>₱80.00</p>
+              <button onclick="addToCart('Croptop', 80.00)">Add to Cart</button>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-4">
+            <img src="product5.jpg">
+            <h4>Smart watch</h4>
+            <div class="rating">
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star-half'></i>
+            </div>
+            <p>₱500.00</p>
+                <button onclick="addToCart('Smart watch=', 500.00)">Add to Cart</button>
+          </div>
+        
+          <div class="col-4">
+            <img src="product 6.jpg" alt="">
+            <h4>Croptop long sleeve</h4>
+            <div class="rating">
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bx-star'></i>
+            </div>
+            <p>₱180.00</p>
+                 <button onclick="addToCart('Croptop long sleeve=', 180.00)">Add to Cart</button>
+          </div>
+        
+          <div class="col-4">
+            <img src="product7.jpg">
+            <h4>Polo Shirt</h4>
+            <div class="rating">
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star-half'></i>
+              <i class='bx bx-star'></i>
+            </div>
+            <p>₱300.00</p>
+                <button onclick="addToCart('Polo Shirt=', 300.00)">Add to Cart</button>
+          </div>
+        
+          <div class="col-4">
+            <img src="product8.jpg">
+            <h4>Cargo pants</h4>
+            <div class="rating">
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bx-star'></i>
+            </div>
+            <p>₱250.00</p>
+                <button onclick="addToCart('Cargo Pants=', 250.00)">Add to Cart</button>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <img src="product 9.jpg">
+          <h4>Cargo pants</h4>
+          <div class="rating">
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bx-star'></i>
+          </div>
+          <p>₱250.00</p>
+              <button onclick="addToCart('Cargo Pants=', 250.00)">Add to Cart</button>
+        </div>
+        
+        <div class="col-4">
+          <img src="product 10.jpg">
+          <h4>Glasses</h4>
+          <div class="rating">
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star-half'></i>
+          </div>
+          <p>₱100.00</p>
+              <button onclick="addToCart('Glasses=', 100.00)">Add to Cart</button>
+        </div>
+        
+        <div class="col-4">
+          <img src="product 11.jpg">
+          <h4>Croptop long sleeve</h4>
+          <div class="rating">
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star-half' ></i>
+          </div>
+          <p>₱180.00</p>
+              <button onclick="addToCart('Croptop long sleeve=', 180.00)">Add to Cart</button>
+        </div>
+        
+        <div class="col-4">
+          <img src="product 12.jpg">
+          <h4>Croptop long sleeve</h4>
+          <div class="rating">
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+          </div>
+          <p>₱180.00</p>
+              <button onclick="addToCart('Croptop long sleeve=', 180.00)">Add to Cart</button>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-4">
+          <img src="product 13.jpg">
+          <h4>Croptop</h4>
+          <div class="rating">
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bx-star'></i>
+          </div>
+          <p>₱70.00</p>
+              <button onclick="addToCart('Croptop=', 70.00)">Add to Cart</button>
+        </div>
+        
+        <div class="col-4">
+          <img src="product 14.jpg">
+          <h4>Varsity jacket</h4>
+          <div class="rating">
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star-half'></i>
+          </div>
+          <p>₱300.00</p>
+              <button onclick="addToCart('Varsity jacket=', 300.00)">Add to Cart</button>
+        </div>
+
+        
+        <div class="col-4">
+          <img src="product 15.jpg">
+          <h4>Varsity jacket</h4>
+          <div class="rating">
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star' ></i>
+          </div>
+          <p>₱300.00</p>
+              <button onclick="addToCart('Varsity jacket=', 300.00)">Add to Cart</button>
+        </div>
+        
+        <div class="col-4">
+          <img src="product 16.jpg">
+          <h4>Mini dress</h4>
+          <div class="rating">
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+          </div>
+          <p>₱240.00</p>
+              <button onclick="addToCart('Mini dress=', 240.00)">Add to Cart</button>
+        </div>
+      </div>
+    
+      <div class="row">
+        <div class="col-4">
+          <img src="product 17.jpg"
+          <h4>Mini dress</h4>
+          <div class="rating">
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+          </div>
+          <p>₱240.00</p>
+              <button onclick="addToCart('Mini dress=', 240.00)">Add to Cart</button>
+        </div>
+        
+        <div class="col-4">
+          <img src="product 18.jpg">
+          <h4>Clothing t-shirt</h4>
+          <div class="rating">
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star-half'></i>
+          </div>
+          <p>₱500.00</p>
+              <button onclick="addToCart('Clothing t-shirt=', 500.00)">Add to Cart</button>
+        </div>
+        
+        <div class="col-4">
+          <img src="product 19.jpg">
+          <h4>Clothing t-shirt</h4>
+          <div class="rating">
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star' ></i>
+          </div>
+          <p>₱500.00</p>
+              <button onclick="addToCart('Clothing t-shirt=', 500.00)">Add to Cart</button>
+        </div>
+        
+        <div class="col-4">
+          <img src="product 20.jpg">
+          <h4>Clothing t-shirt</h4>
+          <div class="rating">
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bx-star'></i>
+          </div>
+          <p>₱500.00</p>                       <button onclick="addToCart('Clothing t-shirt=', 500.00)">Add to Cart</button> 
+        </div>
+        <div id="cart">
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: ₱<span id="cart-total">0.00</span></p>
+        <button onclick="checkout()">Checkout</button>
+    </div>
+      </div>
+    </div>
+<!-- footer -->
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col-1">
+            <h3>Download Our App</h3>
+            <p>Download App for Android and ios Mobile Phone</p>
+            <div class="app-logo">
+              <img src="google-play.png">
+              <img src="app-store.png">
+            </div>
+          </div>
+          <div class="footer-col-2">
+            <img src="logo.png">
+            <p>Our goal is to responsibly provide many people with the enjoyment and advantages of product.</p>
+          </div>
+          <div class="footer-col-3">
+            <h3>Useful Links</h3>
+            <ul>
+              <li>Coupons</li>
+              <li>Blog Post</li>
+              <li>Return Policy</li>
+              <li>Join Affiliate</li>
+            </ul>
+          </div>
+          <div class="footer-col-4">
+            <h3>Follow Us</h3>
+            <ul>
+              <li>Facebook</li>
+              <li>Twitter</li>
+              <li>Instagram</li>
+              <li>Tiktok</li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright 2024-Bea Shop</p>
+      </div>
+    </div>
+    <!-- js toggle menu -->
+    <script>
+      var MenuItems = document.getElementById("MenuItems");
+
+      MenuItems.style.maxHeight = "0px";
+
+      function menutoggle(){
+        if( MenuItems.style.maxHeight == "0px")
+        {
+          MenuItems.style.maxHeight = "200px"
+        }
+        else
+        {
+          MenuItems.style.maxHeight = "0px"
+        }
+      }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
